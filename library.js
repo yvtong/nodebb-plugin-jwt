@@ -14,7 +14,10 @@
 
     var JWT = {};
 
-    JWT.init = function (router, middleware, controllers, callback) {
+    JWT.init = function (params, callback) {
+        var router = params.router;
+        var middleware = params.middleware;
+        var controllers = params.controllers;
         var jwt = require('jsonwebtoken'),
             _ = require('lodash');
 
